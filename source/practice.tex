@@ -49,16 +49,16 @@ I(\theta) = I_{max}\left( \frac{\sin \xi}{\xi} \right)^2, \quad \xi = \frac{\pi 
 \begin{table}[H]
 	\centering
 	\caption{Углы минимумов для решётки с одной щелью}
-	\begin{tabular}{ccc}
+	\begin{tabular}{cccc}
 		\toprule
-		Номер & $\sin \theta$ & $\theta$ \\
+		Номер $n$ & $\sin \theta$ & $\theta$ & $\Delta \theta$ \\
 		\midrule
-		1 & $\dfrac{\lambda}{b}$  & $4^\circ 6' 12''$ \\
-		2 & $\dfrac{2\lambda}{b}$ & $8^\circ 12' 25''$ \\
-		3 & $\dfrac{3\lambda}{b}$ & $12^\circ 18' 38''$ \\
-		4 & $\dfrac{4\lambda}{b}$ & $16^\circ 24' 50''$ \\
-		5 & $\dfrac{5\lambda}{b}$ & $20^\circ 31' 3''$ \\
-		6 & $\dfrac{6\lambda}{b}$ & $24^\circ 37' 16''$ \\
+		1 & $\dfrac{\lambda}{b}$  & $4^\circ 6' 12''$  & -- \\
+		2 & $\dfrac{2\lambda}{b}$ & $8^\circ 12' 25''$ & $4^\circ 6' 13''$ \\
+		3 & $\dfrac{3\lambda}{b}$ & $12^\circ 18' 38''$ & $4^\circ 6' 13''$ \\
+		4 & $\dfrac{4\lambda}{b}$ & $16^\circ 24' 50''$ & $4^\circ 6' 12''$ \\
+		5 & $\dfrac{5\lambda}{b}$ & $20^\circ 31' 3''$ & $4^\circ 6' 13''$ \\
+		6 & $\dfrac{6\lambda}{b}$ & $24^\circ 37' 16''$ & $4^\circ 6' 13''$ \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -79,7 +79,7 @@ I(\theta) = I_{max}\left( \frac{\sin \xi}{\xi} \right)^2, \quad \xi = \frac{\pi 
 2 \cos \eta
 \]
 
-Косинус равен нулю при условии $\eta = \pi / 2 + \pi m, m \in Z$. Найдём углы $\theta$ для минимумов решёточного множителя:
+Формула \cref{I-for-N} принимает минимальное значение, если косинус равен нулю, это происходит при, что $\eta = \pi / 2 + \pi m, m \in Z$. Найдём углы $\theta$ для минимумов решёточного множителя:
 \begin{align}
 	\frac{kd}{2} \sin \theta = \pi / 2 + \pi m \Rightarrow \theta = 
 	\arcsin \big( \frac{\lambda}{2d}(2m + 1) \big), \quad m \in \Z
@@ -91,6 +91,53 @@ I(\theta) = I_{max}\left( \frac{\sin \xi}{\xi} \right)^2, \quad \xi = \frac{\pi 
 \arcsin \big( \frac{\lambda}{2d}(2m + 1) \big), \quad m \in \Z
 \]
 
+Запишем полученные углы для первых 6-ти минимумов в таблицу:
+
+\renewcommand{\arraystretch}{1.9}
+\begin{table}[H]
+	\centering
+	\caption{Углы минимумов для решётки с двумя щелями}
+	\begin{tabular}{cccc}
+		\toprule
+		Номер $m$ & $\sin \theta$ & $\theta$ & $\Delta \theta$ \\
+		\midrule
+		0 & $\dfrac{\lambda}{2d}$   & $42' 40''$        & -- \\
+		1 & $\dfrac{3\lambda}{2d}$  & $2^\circ 8' 1''$  & $1^\circ 25' 21''$ \\
+		2 & $\dfrac{5\lambda}{2d}$  & $3^\circ 33' 22''$ & $1^\circ 25' 21''$ \\
+		3 & $\dfrac{7\lambda}{2d}$  & $4^\circ 58' 44''$ & $1^\circ 25' 22''$ \\
+		4 & $\dfrac{9\lambda}{2d}$  & $6^\circ 24' 5''$  & $1^\circ 25' 21''$ \\
+		5 & $\dfrac{11\lambda}{2d}$ & $7^\circ 49' 26''$ & $1^\circ 25' 21''$ \\
+		6 & $\dfrac{13\lambda}{2d}$ & $9^\circ 14' 47''$ & $1^\circ 25' 21''$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
+
+Главные максимумы распределения \cref{I-for-N} определяются нулями знаменателя решёточного множителя $\sin \eta = 0$, найдём соответствующие им углы:
+\[
+\frac{kd}{2} \sin \theta = \pi s \Rightarrow \theta = \arcsin{\frac{\lambda}{d}s}, \quad s \in \Z
+\]
+
+Итоговая формула примет вид:
+\[
+\theta = \frac{180}{\pi} \arcsin{\frac{\lambda}{d}s}, \quad s \in \Z
+\]
+
+Найдём углы для первых двух максимумов и занесём в таблицу:
+\renewcommand{\arraystretch}{1.8}
+\begin{table}[H]
+	\centering
+	\caption{Углы главных максимумов для решётки с 15 щелями}
+	\begin{tabular}{cccc}
+		\toprule
+		Номер $s$ & $\sin \theta$ & $\theta$ & $\Delta \theta$ \\
+		\midrule
+		1 & $\dfrac{\lambda}{d}$  & $1^\circ 25' 21''$ & -- \\
+		2 & $\dfrac{2\lambda}{d}$ & $2^\circ 50' 42''$ & $1^\circ 25' 21''$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\renewcommand{\arraystretch}{1}
 
 
 
